@@ -24,7 +24,8 @@ public class Interaction
        
         if (Physics.Raycast(ray, out RaycastHit hit, maxInteractionDistance,interactionMask))
         {
-            if (hit.transform.gameObject == currentInteractionObject) return;          
+            if (hit.transform.gameObject == currentInteractionObject) return;
+            
             currentInteraction?.SetInterface(false); //새로운 인터렉션 오브젝트를 찾았다면 기존에 켜져있던 인터렉션 오브젝트의 인터페이스를 오프하여야한다.
 
             if (hit.transform.TryGetComponent<IInteractable>(out currentInteraction))

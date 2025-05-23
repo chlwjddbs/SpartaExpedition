@@ -6,6 +6,7 @@ using UnityEngine.InputSystem.HID;
 public class ItemInstance : MonoBehaviour, IInteractable
 {
     public ItemData itemData;
+
     public int quantity = 1;
 
     public virtual void OnInteraction() 
@@ -32,6 +33,4 @@ public class ItemInstance : MonoBehaviour, IInteractable
 
         UIManager.Instance.SetInteractionText(active, itemDescription);
     }
-
-    public virtual void UseItem() { }
 }

@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     {
         hpBar.Init();
         inventoryUI.Init();
+        interactionText.enabled = false;
     }
 
     public void SetInteractionText(bool active, string str = "")
